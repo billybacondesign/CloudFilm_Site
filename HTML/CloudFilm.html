@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <title>
+            Cloud Film
+        </title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        
+        <style>
+            
+/*            GENERAL*/
+            
+            body {
+                margin:0px;
+                font-family: 'Quicksand', sans-serif;
+                color:#606161;
+                background: linear-gradient(215deg, #c3e8f1, #d8e8ec, #a3d0d7, #edf0f1);
+                background-size: 800% 800%;
+                -webkit-animation: sky 30s ease infinite;
+                -moz-animation: sky 30s ease infinite;
+                animation: sky 30s ease infinite;
+            }
+            
+            a {
+                text-decoration: none;
+                color:rgba(237, 240, 241);
+            }
+            
+            .master-container{
+                width:100%;
+                overflow:none;
+                
+            }
+            
+            .grad {
+                background: rgba(255,255,255,1);
+                background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
+                background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(204,204,204,1)));
+                background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
+                background: -o-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
+                background: -ms-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
+                background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
+            }
+            
+            
+            .glass {
+                background-color:rgba(237, 240, 241, 0.7)
+            }
+            
+            .coal {
+                background-color:#606161;
+                color:rgb(237, 240, 241);
+            }
+            
+            .v-center {
+                display:flex;
+                flex-direction:column;
+                justify-content: center;
+            }
+            
+            .wrap {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            
+
+
+/*            NAVBAR*/
+            
+            .nav-bar {
+                width:100%;
+                height:64px;
+                box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+                position: fixed;
+                z-index:100;
+            }
+            
+            .nav-bar img {
+                height:54%;
+                width:auto;
+                display:block;
+                margin:0 auto;
+            }
+            
+/*            HERO*/
+            
+            .hero {
+                width:100%;
+                height: 100vh;
+                background-image: url("/Assests/desktop_texture.png");
+                background-size:cover;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            
+            .cloud-wrap {
+                width:90%;
+                margin:0 auto;
+                margin-top: 64px;
+                display:flex;
+                flex-wrap: wrap;
+                justify-content:space-around;     
+            }
+            
+            .left {
+                width:100px;
+                animation-name: cloud-left;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+            }
+            
+            .left img {
+                width:190%;
+                margin:0 auto;
+                display:block;
+                margin-left: 50%;
+                transform: translateX(-50%);
+
+
+            }
+            
+            .right {
+                width:100px;
+            }
+            
+            .right img {
+                width:180%;
+                margin:0 auto;
+                display:block;
+                margin-left: 50%;
+                padding-top:100px;
+                transform: translateX(-50%);
+            }
+            
+            .logo {
+                width:80%;
+                max-width:420px;
+                background-image:url("/Assests/Full_Logo.png");
+                background-size:90% auto;
+            }
+            
+
+            .cloud {
+                height:300px;
+                background-repeat: no-repeat;
+                margin:0 auto;
+            }
+            
+
+            @media screen and (max-width: 700px){
+                .left, .right {
+                    display:none;
+                }
+            }
+            
+            @keyframe cloud-left {
+                0% {
+                    transform: translatey(0px);
+                }
+                50% {
+                    transform: translatey(-20px);
+                }
+                100% {
+                    transform: translatey(0px);
+                }
+            }
+            
+/*            PANEL*/
+            
+            .panel {
+                margin:0px;
+                margin:0 auto;
+                box-shadow: 0px -1px 10px rgba(0,0,0,0.1)
+            }
+            
+            .panel p {
+                margin:0 auto;
+                text-align: center;
+                display: block;
+                width:80%;
+            }
+            
+            .panel h2 {
+                width:80%;
+                margin:0 auto;
+                text-align: center;
+                display: block;
+                margin-bottom: 16px
+            }
+            
+/*            HALFHALF*/
+            
+            
+            .col-text {
+                height:20em;
+            }
+            .grid-flex {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-flex: 1;
+                -webkit-flex-grow: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                flex-direction: row; 
+                -webkit-flex-direction: row;
+                -webkit-flex-wrap: wrap;
+                -webkit-justify-content: space-around;
+                margin-top: -32px;
+            }
+            .col {
+                  -webkit-box-flex: 1;
+                  -webkit-flex: 1;
+                  -ms-flex: 1;
+                  flex: 1;
+            }
+            .col-left {
+                  -webkit-box-ordinal-group:-1;
+                  -webkit-order: -1;
+                  -ms-flex-order: -1;
+                  order: -1;
+            }
+            .col-text{
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
+            .Aligner-item {
+                width: 68%;
+            }
+            .col-image {
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+                background-position:center center;
+            }
+
+            @media (max-width: 840px) {
+                  .grid-flex {
+                    height: 30em;
+                    display: -webkit-flex;
+                    -webkit-flex-direction: column;
+                    flex-direction: column; 
+               }
+              .col {
+                     order:vertical;
+              }
+              .col-left {
+                    -webkit-box-ordinal-group:0;
+                    -webkit-order: 0;
+                    -ms-flex-order: 0;
+                    order: 0;
+              }
+              .col-text div p, .col-text div h2  {
+                    text-align: center;
+              }
+              .Aligner-item {
+                    width: 90%;
+              }
+            }
+            
+            .cloud-one {
+                background-image:url("/Assests/Image-36.png");
+            }
+            
+            .cloud-two {
+                background-image:url("/Assests/image-37.png");
+            }
+            
+            .cloud-mm {
+                background-image:url("/Assests/image_MM.png");
+            }
+            
+            .cloud-dcm {
+                background-image:url("/Assests/image_DCM.png");
+            }
+            
+            
+/*            FUTURE PROJECTS*/
+            
+            .future-wrap {
+                width:100%;
+                display: flex;
+                flex-wrap:wrap;
+                justify-content:space-around;
+            }
+            
+            
+            .project {
+                width:25%;
+                min-width:160px;
+                height:160px;
+                transition: all 0.5s ease;
+                color:white;
+
+            }
+            
+            .project:hover {
+                background-color:rgba(237, 240, 241, 0.7)!important;
+                color:#606161!important;
+                box-shadow: 2px 2px 5px rbga(0,0,0,0.7);
+                z-index: 100;
+                
+            }
+            
+            .future-wrap:last-child .project { 
+                width:33.33%;
+            }
+            
+            .project span {
+                margin:0 auto;
+                display:block;
+                width:100%;
+                text-align: center;
+                font-weight: 700;
+                font-size: 1.1em;
+            }
+            
+            @media (max-width: 840px) {
+                
+                .project {
+                    width:100%!important;
+                    height:90px
+                }
+            }
+            
+/*            FOOTER*/
+            
+            
+            .footer {
+                width:100%;
+                height:260px;
+                
+            }
+            
+            .footer img {
+                width:120px;
+                margin:0 auto;
+                padding-bottom: 24px;
+            }
+            
+            .footer p {
+                margin:0 auto;
+                display:block;
+                width:80%;
+                text-align: center;
+                padding-bottom:16px
+            }
+            
+            .break {
+                width:80%;
+                margin:0 auto;
+                text-align: right;
+                font-size:0.7em;
+                border-bottom:1px solid rgba(237, 240, 241, 0.7)
+            }
+            
+            
+/*            ANIMATION*/
+            
+
+                @-webkit-keyframes sky {
+                    0%{background-position:0% 74%}
+                    50%{background-position:100% 27%}
+                    100%{background-position:0% 74%}
+                }
+                @-moz-keyframes sky {
+                    0%{background-position:0% 74%}
+                    50%{background-position:100% 27%}
+                    100%{background-position:0% 74%}
+                }
+                @keyframes sky { 
+                    0%{background-position:0% 74%}
+                    50%{background-position:100% 27%}
+                    100%{background-position:0% 74%}
+                }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div class="master-container">
+            
+            <div class="nav-bar grad v-center">
+                <img src="/Assests/cloudfilm_logo_text_notag.png">
+            </div>
+            
+            <div class="hero v-center">
+                <div class="cloud-wrap">
+                    
+                    <div class="cloud left">
+                        <img src="/Assests/render_cloud1.png">
+                    </div>
+                    
+                    <div class="cloud logo">
+                    </div>
+                    
+                    <div class="cloud right">
+                        <img src="/Assests/render_cloud2.png">
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="panel glass v-center">
+            
+                <div style="padding:48px 0px 80px 0px">
+                    <h2>
+                        About Cloud Film
+                    </h2>
+                    <p>
+                        Cloud Film Ltd produces online interactive films addressing the issues surrounding personal, medical and emotional issues. These problems are faced not only by individuals, but often their families and significant others.
+                    </p>
+                </div>
+
+            </div>
+            
+
+            
+            <div class="grid-flex">
+                
+                <div class="col col-image cloud-one">
+                </div>
+                
+                <div class="col col-text">
+                    <div class="Aligner-item">
+                        <p>
+                             Our intention is to provide comprehensive support for people in these situations through interactive film, which includes dramatisation, interviews with relevant experts, ‘How To’ sections, and links to external support networks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-flex">
+                
+                <div class="col col-image cloud-two">
+                </div>
+                
+                <div class="col col-text col-left">
+                    <div class="Aligner-item">
+                        <p>
+                            “ABOUT JACK” is our first project which will support the families of children with Life-Limiting Conditions.  Once the project is complete it will be available online and free for anyone who needs to use it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel glass v-center">
+            
+                <div style="padding:40px 0px 32px 0px">
+                    <h2>
+                        Future projects under consideration include the following:
+                    </h2>
+                    <p>
+                        Mental Health Support including:
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="future-projects">
+                <div class="future-wrap">
+
+                    <div class="project v-center" style="background-color:rgba(192, 57, 43,0.9);">
+                        <span>
+                            PTSD
+                        </span>
+                    </div>
+
+                    <div class="project v-center" style="background-color:rgba(103, 65, 114,0.9);">
+                        <span>
+                            Eating Disorders
+                        </span>
+                    </div>
+
+                    <div class="project v-center" style="background-color:rgba(145, 61, 136,0.9);">
+                        <span>
+                            Depression and anxiety
+                        </span>
+                    </div>
+
+                    <div class="project v-center" style="background-color:rgba(1,50,67,0.9);">
+                        <span>
+                            Living well with Dementia
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="future-wrap">
+
+                    <div class="project v-center" style="background-color:rgba(68,108,179,0.9);">
+                        <span>
+                            Domestic Abuse
+                        </span>
+                    </div>
+
+                    <div class="project v-center" style="background-color:rgba(51, 110, 123,0.9);">
+                        <span>
+                            Living with a Terminal Illness
+                        </span>
+                    </div>
+
+                    <div class="project v-center" style="background-color:rgba(30, 130, 76,0.9);">
+                        <span>
+                            Coping with Bereavement
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="panel coal v-center" style="margin-bottom:24px;">
+            
+                <div style="padding:32px 0px 32px 0px">
+                    <p>
+                        Our approach can also be used successfully within business environments to address relevant issues.
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="panel glass v-center">
+            
+                <div style="padding:40px 0px 32px 0px">
+                    <h2>
+                        About us
+                    </h2>
+                    <p>
+                        The people behind the project
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="grid-flex">
+                
+                <div class="col col-image cloud-mm">
+                </div>
+                
+                <div class="col col-text">
+                    <div class="Aligner-item">
+                        <h2>Margaret McEwan</h2>
+                        <p>
+                             Margaret has spent the last twenty years developing and delivering entirely bespoke training solutions for Global and UK businesses, public bodies and institutions. Today she specialises in work within the medical and pharmaceutical sector with clients including global pharmaceutical companies and UK medical organisations. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-flex">
+                
+                <div class="col col-image cloud-dcm">
+                </div>
+                
+                <div class="col col-text col-left">
+                    <div class="Aligner-item">
+                        <h2>Damaris Lockwood</h2>
+                        <p>
+                            As a film director, Damaris has worked extensively in theatre; and has most recently been working with McEwan Associates both production managing and directing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer coal v-center">
+                
+                <img src="/Assests/text_logo_white.png">
+                
+                <p> <a href="mailto:dcm.lockwood@cloudfilm.co.uk">dcm.lockwood@cloudfilm.co.uk</a> <br><a href="mailto:mm.mcewan@cloudfilm.co.uk">mm.mcewan@cloudfilm.co.uk</a>  <br> <br>Please contact us if you would like further information about us, or any of our projects.</p>
+                
+                <div class="break">
+                    &copy;CloudFilm 2018
+                </div>
+                
+            </div>
+        
+        </div>
+    
+    </body>
+    
+</html>
